@@ -1,0 +1,2 @@
+E:\soft\TopFashionSolution\Config\bin\Release\Config.dll
+E:\soft\TopFashionSolution\Config\obj\Release\Config.dll

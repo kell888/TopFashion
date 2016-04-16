@@ -1,0 +1,2 @@
+E:\soft\TopFashionSolution\Log\bin\Release\Log.dll
+E:\soft\TopFashionSolution\Log\obj\Release\Log.dll

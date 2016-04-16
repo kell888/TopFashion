@@ -1,0 +1,9 @@
+E:\soft\TopFashionSolution\Common\bin\Release\Common.dll
+E:\soft\TopFashionSolution\Common\bin\Release\Config.dll
+E:\soft\TopFashionSolution\Common\bin\Release\ICSharpCode.SharpZipLib.dll
+E:\soft\TopFashionSolution\Common\bin\Release\Log.dll
+E:\soft\TopFashionSolution\Common\bin\Release\NPOI.dll
+E:\soft\TopFashionSolution\Common\bin\Release\NPOI.OOXML.dll
+E:\soft\TopFashionSolution\Common\bin\Release\NPOI.OpenXml4Net.dll
+E:\soft\TopFashionSolution\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+E:\soft\TopFashionSolution\Common\obj\Release\Common.dll

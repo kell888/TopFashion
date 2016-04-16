@@ -1,0 +1,9 @@
+E:\soft\TopFashionSolution\DAL\bin\Release\DAL.dll
+E:\soft\TopFashionSolution\DAL\bin\Release\Common.dll
+E:\soft\TopFashionSolution\DAL\bin\Release\Config.dll
+E:\soft\TopFashionSolution\DAL\bin\Release\Interop.SQLDMO.dll
+E:\soft\TopFashionSolution\DAL\bin\Release\Log.dll
+E:\soft\TopFashionSolution\DAL\bin\Release\NPOI.dll
+E:\soft\TopFashionSolution\DAL\bin\Release\ICSharpCode.SharpZipLib.dll
+E:\soft\TopFashionSolution\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\soft\TopFashionSolution\DAL\obj\Release\DAL.dll

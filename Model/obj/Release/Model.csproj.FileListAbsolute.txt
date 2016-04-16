@@ -1,0 +1,2 @@
+E:\soft\TopFashionSolution\Model\bin\Release\Model.dll
+E:\soft\TopFashionSolution\Model\obj\Release\Model.dll

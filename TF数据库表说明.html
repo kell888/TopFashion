@@ -1,0 +1,4433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+<!--
+body,td,th {font-size: 12px; }
+.tableClass{border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;background:#efefef;}
+.tableClass th,.tableClass td{border-right:1px solid #888;border-bottom:1px solid #888; height:25px; text-align:center}
+.tableClass th{font-weight:bold;background:#ccc;} 
+-->
+</style>
+</HEAD>
+<BODY>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="Flow" id="Flow"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">Flow</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>CurrentIndex</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((-1))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>TemplateID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Stages</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="FlowTemplate" id="FlowTemplate"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">FlowTemplate</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Stages</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TaskInfo" id="TaskInfo"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TaskInfo</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>EntityId</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>FlowID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sponsor</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TaskStage" id="TaskStage"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TaskStage</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>TaskStatus</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>TemplateID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>ActualExec</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>ExecTime</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>ActualAppr</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>ApprTime</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TaskStageTemplate" id="TaskStageTemplate"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TaskStageTemplate</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Executors</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Approvers</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Action" id="TF_Action"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Action</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>FormName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>ControlName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Alert" id="TF_Alert"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Alert</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>提醒项目</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>提醒时间</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>提醒方式</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>提醒对象</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Attachment" id="TF_Attachment"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Attachment</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>AttachmentFilename</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>255</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Size</td>
+<td></td>
+<td></td>
+<td>bigint</td>
+<td>19</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Uploader</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>UploadTime</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_CardType" id="TF_CardType"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_CardType</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>卡种</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>是否电子芯片</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((1))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Config" id="TF_Config"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Config</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>ConfigName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>ConfigValue</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>2000</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>ConfigType</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Extension</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Dairy" id="TF_Dairy"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Dairy</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pos机会籍</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pos机私教</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>现金会籍</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>现金私教</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>存水费</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>水吧余</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>总金额</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>经手人</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>日期</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Depart" id="TF_Depart"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Depart</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Parent</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Manager</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Roles</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_DocObject" id="TF_DocObject"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_DocObject</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>FormID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>DocItems</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>2000</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Owner</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_FieldMap" id="TF_FieldMap"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_FieldMap</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Map</td>
+<td></td>
+<td></td>
+<td>varbinary</td>
+<td>-1</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Finance" id="TF_Finance"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Finance</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>日期</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>项目</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>是否进账</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>金额</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>余款</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>经手人</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>接收人</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Detail</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_FinanceDetail" id="TF_FinanceDetail"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_FinanceDetail</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>项目</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>金额</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>是否进账</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>责任人</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td>√</td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>提交时间</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Followup" id="TF_Followup"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Followup</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>MemberID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>跟进方式</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>跟进人</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>跟进时间</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>跟进结果</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_FollowupResult" id="TF_FollowupResult"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_FollowupResult</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>结果</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_FollowupType" id="TF_FollowupType"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_FollowupType</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>方式</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_FormItem" id="TF_FormItem"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_FormItem</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>ItemName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>ItemValue</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>ItemType</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_FormObject" id="TF_FormObject"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_FormObject</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>FormName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>FormType</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>FormItems</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>2000</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Owner</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_FormType" id="TF_FormType"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_FormType</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>TypeName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Income" id="TF_Income"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Income</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>PID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>IsProduct</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>IsIncome</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>数量</td>
+<td></td>
+<td></td>
+<td>decimal</td>
+<td>18</td>
+<td>2</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>实价</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>经手人</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>时间</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Inventory" id="TF_Inventory"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Inventory</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>PID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>IsProduct</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>IsIncome</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>数量</td>
+<td></td>
+<td></td>
+<td>decimal</td>
+<td>18</td>
+<td>2</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>更新时间</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Member" id="TF_Member"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Member</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>卡种</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>姓名</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>性别</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>到期日</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>卡号</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>生日</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>电话</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>住址</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_MemberMoney" id="TF_MemberMoney"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_MemberMoney</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>会员姓名</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>会员电话</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>账户余额</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Module" id="TF_Module"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Module</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>FormName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>ControlName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_MoneyRecord" id="TF_MoneyRecord"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_MoneyRecord</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>MID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>发生金额</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>是否充值</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>操作人</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>发生时间</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Permission" id="TF_Permission"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Permission</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>IsExcept</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>TheModule</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>TheAction</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td>√</td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_PersonalTrain" id="TF_PersonalTrain"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_PersonalTrain</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>MemberID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>私教项目</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>开始日期</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>结束日期</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>次数</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>教练</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>SaleTime</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Product" id="TF_Product"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Product</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>品名</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>种类</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>单位</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>进价</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>售价</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>厂家</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>姓名</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>电话</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>地址</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_ProductType" id="TF_ProductType"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_ProductType</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>类型</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Property" id="TF_Property"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Property</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>名称</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>单位</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>用途</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>价格</td>
+<td></td>
+<td></td>
+<td>money</td>
+<td>19</td>
+<td>4</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Renew" id="TF_Renew"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Renew</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>MemberID</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>卡种</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>卡号</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>续卡时间</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>经手人</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Role" id="TF_Role"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Role</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Permissions</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((1))</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Staff" id="TF_Staff"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Staff</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Depart</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Condition</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>姓名</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>性别</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>生日</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>电话</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>宿舍</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>钥匙数</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>工衣数</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>工牌数</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>是否全部回收</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_StaffCondition" id="TF_StaffCondition"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_StaffCondition</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>状态</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>是否在职</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((1))</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_SystemLog" id="TF_SystemLog"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_SystemLog</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>UserName</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>UserIP</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>UserMac</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Addr</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>LogType</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Msg</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>LogTime</td>
+<td></td>
+<td></td>
+<td>datetime</td>
+<td>23</td>
+<td>3</td>
+<td></td>
+<td>(getdate())</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_User" id="TF_User"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_User</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Username</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Password</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Depart</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Usergroup</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Roles</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Flag</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_UserGroup" id="TF_UserGroup"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_UserGroup</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Name</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Roles</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Remark</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Worklog" id="TF_Worklog"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Worklog</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>销售</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>日期</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>客户</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>电话</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>是否自访</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>是否老会员</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>是否电话拜访</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>性别</td>
+<td></td>
+<td></td>
+<td>bit</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>意向</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>住址</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>50</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="25" align="center"><a name="TF_Workplan" id="TF_Workplan"></a></td>
+</tr>
+<tr>
+<td height="25" align="center">TF_Workplan</td>
+</tr>
+<tr>
+<td>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="tableClass">
+<tr>
+<td width="30px">序号</td>
+<td width="100px">字段名</td>
+<td width="60px"> 是否标识</td>
+<td width="60px">是否主键</td>
+<td width="70px">类型</td>
+<td width="60px">长度</td>
+<td width="60px">小数位数</td>
+<td width="60px">容许为空</td>
+<td width="60px">初始值</td>
+<td width="140px">备注</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ID</td>
+<td>√</td>
+<td>√</td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>销售</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>日期</td>
+<td></td>
+<td></td>
+<td>date</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>带人数</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>号码数</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>成单数</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>回访数</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+<td>((0))</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>备注</td>
+<td></td>
+<td></td>
+<td>varchar</td>
+<td>500</td>
+<td>0</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>
+

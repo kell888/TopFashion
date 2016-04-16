@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<configuration>
+  <connectionStrings>
+    <add name="connString" connectionString="Password=damaodf;User ID=sa;Initial Catalog=TF;Data Source=192.168.1.13;User Instance=False" providerName="System.Data.SqlClient"/>
+    <add name="backupConnString" connectionString="Password=damaodf;User ID=sa;Initial Catalog=backup;Data Source=192.168.1.13;User Instance=False" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <appSettings>
+    <add key="ip" value="192.168.1.13"/>
+    <add key="port" value="8000"/>
+    <add key="downip" value="192.168.1.13"/>
+    <add key="downport" value="9000"/>
+    <add key="AdminName" value="kell"/>
+    <add key="UseObsolete" value="1"/>
+    <add key="SMSApi" value="SendSMS,SMSLib.Sender,SMSLib.dll"/>
+  </appSettings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

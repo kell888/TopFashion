@@ -1,0 +1,14 @@
+F:\2015\DAL\Model\bin\Debug\Model.dll
+F:\2015\DAL\Model\bin\Debug\Model.pdb
+F:\2015\DAL\Model\obj\Debug\ResolveAssemblyReference.cache
+F:\2015\DAL\Model\obj\Debug\Model.dll
+F:\2015\DAL\Model\obj\Debug\Model.pdb
+F:\2015\TopFashionSolution\Model\bin\Debug\Model.dll
+F:\2015\TopFashionSolution\Model\bin\Debug\Model.pdb
+F:\2015\TopFashionSolution\Model\obj\Debug\ResolveAssemblyReference.cache
+F:\2015\TopFashionSolution\Model\obj\Debug\Model.dll
+F:\2015\TopFashionSolution\Model\obj\Debug\Model.pdb
+E:\soft\TopFashionSolution\Model\bin\Debug\Model.dll
+E:\soft\TopFashionSolution\Model\bin\Debug\Model.pdb
+E:\soft\TopFashionSolution\Model\obj\Debug\Model.dll
+E:\soft\TopFashionSolution\Model\obj\Debug\Model.pdb
