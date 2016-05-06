@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>UMiX77rZ627o61ma3HSz3o9EIK8=</dsig:DigestValue>
+        <dsig:DigestValue>hRWtPWXhtEiCK4M5G2obW6Drfkk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qjVZqgC7ahLGZ0XituMBuTTvsxE=</dsig:DigestValue>
+        <dsig:DigestValue>S2h5TKCBT3thgNPzthEyOW1K9No=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Rp9nIzaKONq4TnyP98dowk0OaLg=</dsig:DigestValue>
+        <dsig:DigestValue>eJAxTed/rtgM1SLyB0NXCowBMCw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>goABtBEJsfMmc84zX7piBJze+Ho=</dsig:DigestValue>
+        <dsig:DigestValue>L/dD8NZgQpz41TrHrvD4QN0ZirY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KellFileTransfer.dll" size="34816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KellFileTransfer.dll" size="37376">
       <assemblyIdentity name="KellFileTransfer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>+7sUf1H+EwPq9JZJ+vI2F8jtIN8=</dsig:DigestValue>
+        <dsig:DigestValue>AsIF/ernaIeVWoNpphB4ndz6uo0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -170,7 +170,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gS4/hsK+1VAoh1fc0nw+FkTVjv4=</dsig:DigestValue>
+        <dsig:DigestValue>ikY9oMu3tPNgIxgH47gi+fMWczc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -182,7 +182,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3NqoPuCG/wzV59yZNLa3zJxlH3s=</dsig:DigestValue>
+        <dsig:DigestValue>Ki6xR7FuHxvaDFgiPF482RF7O/M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -266,7 +266,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>L6nlpCoz0zxEljhtUWut7egfW4Y=</dsig:DigestValue>
+        <dsig:DigestValue>/cnA6AC+GKdIOkwmEJ/apUqrK0Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
