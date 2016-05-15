@@ -70,6 +70,12 @@ namespace TopFashion
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+                //处理未捕获的异常，始终将异常传送到 ThreadException 处理程序。忽略应用程序配置文件。
+                Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+                //订阅ThreadException事件，处理UI线程异常，处理方法为 Application_ThreadException
+                Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
+                //订阅UnhandledException事件，处理非UI线程异常 ，处理方法为 CurrentDomain_UnhandledException
+                AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
                 Application.Run(MainForm.GetInstance());
             }
             else
@@ -96,6 +102,59 @@ namespace TopFashion
             //        System.Environment.Exit(1);
             //    }
             //}
+        }
+
+        private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            string str = string.Format("应用程序错误:{0},应用程序状态：{1}", e.ExceptionObject.ToString(), (e.IsTerminating ? "终止" : "未终止"));
+
+            StackTrace st = new StackTrace(true);
+            StackFrame sf = st.GetFrame(0);
+            string fileName = sf.GetFileName();
+            Type type = sf.GetMethod().ReflectedType;
+            //string assName = type.Assembly.FullName;
+            string typeName = type.FullName;
+            string methodName = sf.GetMethod().Name;
+            int lineNo = sf.GetFileLineNumber();
+            int colNo = sf.GetFileColumnNumber();
+            WriteLog.CreateLog("内部操作", typeName + "=>" + methodName + "(" + lineNo + "行" + colNo + "列)", "error", str);
+
+            MessageBox.Show("发生应用程序致命错误，请及时联系系统管理员！", "应用程序错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        /// <summary>
+        /// 这就是我们要在发生未处理异常时处理的方法，我这是写出错详细信息到文本，给大家做个参考
+        /// 做法很多，可以是把出错详细信息记录到文本、数据库，发送出错邮件到作者信箱或出错后重新初始化等等
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
+        {
+            string str = "";
+            Exception error = e.Exception as Exception;
+            if (error != null)
+            {
+                string strDateInfo = "出现应用程序未处理的线程异常：" + DateTime.Now.ToString() + "/r/n";
+                str = string.Format(strDateInfo + "异常类型：{0}/r/n异常消息：{1}/r/n异常信息：{2}/r/n",
+                     error.GetType().Name, error.Message, error.StackTrace);
+            }
+            else
+            {
+                str = string.Format("应用程序线程错误:{0}", e);
+            }
+
+            StackTrace st = new StackTrace(true);
+            StackFrame sf = st.GetFrame(0);
+            string fileName = sf.GetFileName();
+            Type type = sf.GetMethod().ReflectedType;
+            string assName = type.Assembly.FullName;
+            string typeName = type.FullName;
+            string methodName = sf.GetMethod().Name;
+            int lineNo = sf.GetFileLineNumber();
+            int colNo = sf.GetFileColumnNumber();
+            WriteLog.CreateLog("内部操作", typeName + "=>" + methodName + "(" + lineNo + "行" + colNo + "列)", "error", str);
+
+            MessageBox.Show("发生应用程序线程致命错误，请及时联系系统管理员！", "线程错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private static void CreateDesktopShortCut()
