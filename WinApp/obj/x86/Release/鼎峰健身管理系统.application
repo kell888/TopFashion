@@ -14,14 +14,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="鼎峰健身管理系统.exe.manifest" size="16394">
+    <dependentAssembly dependencyType="install" codebase="鼎峰健身管理系统.exe.manifest" size="15774">
       <assemblyIdentity name="鼎峰健身管理系统.exe" version="1.0.0.38" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>n62Fgg/5kxyJbnSzpPvllhkfLlI=</dsig:DigestValue>
+        <dsig:DigestValue>aO8wyggsdcOigFBUrnOV6vqOfbI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

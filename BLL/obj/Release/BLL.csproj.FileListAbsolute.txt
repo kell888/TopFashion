@@ -13,3 +13,14 @@ E:\soft\TopFashionSolution\BLL\bin\Release\Common.dll
 E:\soft\TopFashionSolution\BLL\bin\Release\KellWorkFlow.pdb
 E:\soft\TopFashionSolution\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 E:\soft\TopFashionSolution\BLL\obj\Release\BLL.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\BLL.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\Config.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\DAL.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\KellWorkFlow.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\Log.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\Model.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\Interop.SQLDMO.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\Common.dll
+F:\2016\TopFashionSolution\BLL\bin\Release\KellWorkFlow.pdb
+F:\2016\TopFashionSolution\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+F:\2016\TopFashionSolution\BLL\obj\Release\BLL.dll

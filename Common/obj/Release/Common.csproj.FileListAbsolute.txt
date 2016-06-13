@@ -7,3 +7,8 @@ E:\soft\TopFashionSolution\Common\bin\Release\NPOI.OOXML.dll
 E:\soft\TopFashionSolution\Common\bin\Release\NPOI.OpenXml4Net.dll
 E:\soft\TopFashionSolution\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
 E:\soft\TopFashionSolution\Common\obj\Release\Common.dll
+F:\2016\TopFashionSolution\Common\bin\Release\Common.dll
+F:\2016\TopFashionSolution\Common\bin\Release\Config.dll
+F:\2016\TopFashionSolution\Common\bin\Release\Log.dll
+F:\2016\TopFashionSolution\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+F:\2016\TopFashionSolution\Common\obj\Release\Common.dll

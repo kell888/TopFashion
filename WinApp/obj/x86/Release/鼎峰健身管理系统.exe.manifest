@@ -43,50 +43,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="201728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="197120">
       <assemblyIdentity name="BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>PpAkNZF8Ss+sA90c1S7CSf+xPIE=</dsig:DigestValue>
+        <dsig:DigestValue>mhlSFLMlg9LQiH4Kdv5jW9e+34s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Common.dll" size="47104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Common.dll" size="45056">
       <assemblyIdentity name="Common" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WNnljHGcbRw/ucvs1/FqQPggizQ=</dsig:DigestValue>
+        <dsig:DigestValue>GYcEp/CWV3mIfF7WQxSjySVfp5s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Config.dll" size="7168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Config.dll" size="6656">
       <assemblyIdentity name="Config" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8v5n9t7Qg8EKr3q/LMmzRToJwYI=</dsig:DigestValue>
+        <dsig:DigestValue>/NWdg9vj5XqHop2x1x3MqevzCIc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="35328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="34816">
       <assemblyIdentity name="DAL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>TG9Scqffs0uBg8649PRFJ3VsF5Q=</dsig:DigestValue>
+        <dsig:DigestValue>EqRWc1lpbudUgclgsMgRwgxSlU4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -163,26 +163,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Log.dll" size="11776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Log.dll" size="11264">
       <assemblyIdentity name="Log" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yC+GgsasdRDDL1dMuYp7beM4248=</dsig:DigestValue>
+        <dsig:DigestValue>GXkR/yT+psOqQuKj05A5B78K0vQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Model.dll" size="50688">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Model.dll" size="48640">
       <assemblyIdentity name="Model" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DbXsYJ+CsvUQChtiLmI+j1JhtIk=</dsig:DigestValue>
+        <dsig:DigestValue>KstaBozFbOfcKnfahlBhiPI8OR8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -235,18 +235,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Resources.dll" size="1107456">
-      <assemblyIdentity name="Resources" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Zpo5kv1neq97qpwp9aDqOw0qUfQ=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WinFormPager.dll" size="16384">
       <assemblyIdentity name="WinFormPager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -259,14 +247,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="鼎峰健身管理系统.exe" size="6244352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="鼎峰健身管理系统.exe" size="6240688">
       <assemblyIdentity name="鼎峰健身管理系统" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ljq8zHwFvsS1k3H1UrRU5vfIwWc=</dsig:DigestValue>
+        <dsig:DigestValue>D4UfjHdc8Chb0oLPC26Hi9NV0XE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

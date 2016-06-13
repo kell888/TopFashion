@@ -7,3 +7,12 @@ E:\soft\TopFashionSolution\DAL\bin\Release\NPOI.dll
 E:\soft\TopFashionSolution\DAL\bin\Release\ICSharpCode.SharpZipLib.dll
 E:\soft\TopFashionSolution\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 E:\soft\TopFashionSolution\DAL\obj\Release\DAL.dll
+F:\2016\TopFashionSolution\DAL\bin\Release\DAL.dll
+F:\2016\TopFashionSolution\DAL\bin\Release\Common.dll
+F:\2016\TopFashionSolution\DAL\bin\Release\Config.dll
+F:\2016\TopFashionSolution\DAL\bin\Release\Interop.SQLDMO.dll
+F:\2016\TopFashionSolution\DAL\bin\Release\Log.dll
+F:\2016\TopFashionSolution\DAL\bin\Release\NPOI.dll
+F:\2016\TopFashionSolution\DAL\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\2016\TopFashionSolution\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+F:\2016\TopFashionSolution\DAL\obj\Release\DAL.dll
