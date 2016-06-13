@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DairyForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
             this.selectStaffControl1 = new TopFashion.SelectStaffControl();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -66,8 +70,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
@@ -77,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -93,6 +102,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.numericUpDown10);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.numericUpDown8);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.numericUpDown9);
+            this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.selectStaffControl1);
             this.tabPage1.Controls.Add(this.dateTimePicker3);
             this.tabPage1.Controls.Add(this.textBox2);
@@ -126,10 +141,54 @@
             this.tabPage1.Text = "业绩编辑";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // numericUpDown8
+            // 
+            this.numericUpDown8.Location = new System.Drawing.Point(61, 176);
+            this.numericUpDown8.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericUpDown8.Name = "numericUpDown8";
+            this.numericUpDown8.Size = new System.Drawing.Size(230, 21);
+            this.numericUpDown8.TabIndex = 19;
+            this.numericUpDown8.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(9, 179);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 12);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "微信私教";
+            // 
+            // numericUpDown9
+            // 
+            this.numericUpDown9.Location = new System.Drawing.Point(61, 149);
+            this.numericUpDown9.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericUpDown9.Name = "numericUpDown9";
+            this.numericUpDown9.Size = new System.Drawing.Size(230, 21);
+            this.numericUpDown9.TabIndex = 20;
+            this.numericUpDown9.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 152);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 12);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "微信会籍";
+            // 
             // selectStaffControl1
             // 
             this.selectStaffControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.selectStaffControl1.Location = new System.Drawing.Point(61, 229);
+            this.selectStaffControl1.Location = new System.Drawing.Point(61, 312);
             this.selectStaffControl1.Name = "selectStaffControl1";
             this.selectStaffControl1.SelectedStaffs = ((System.Collections.Generic.List<TopFashion.Staff>)(resources.GetObject("selectStaffControl1.SelectedStaffs")));
             this.selectStaffControl1.SelectOnlyOne = true;
@@ -139,23 +198,23 @@
             // dateTimePicker3
             // 
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(61, 254);
+            this.dateTimePicker3.Location = new System.Drawing.Point(61, 338);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(230, 21);
             this.dateTimePicker3.TabIndex = 15;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(61, 282);
+            this.textBox2.Location = new System.Drawing.Point(61, 365);
             this.textBox2.MaxLength = 500;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 132);
+            this.textBox2.Size = new System.Drawing.Size(230, 49);
             this.textBox2.TabIndex = 14;
             // 
             // numericUpDown7
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(61, 203);
+            this.numericUpDown7.Location = new System.Drawing.Point(61, 286);
             this.numericUpDown7.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -168,7 +227,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(32, 282);
+            this.label14.Location = new System.Drawing.Point(31, 368);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 12);
             this.label14.TabIndex = 12;
@@ -177,7 +236,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(31, 258);
+            this.label13.Location = new System.Drawing.Point(31, 342);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(29, 12);
             this.label13.TabIndex = 12;
@@ -186,7 +245,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 234);
+            this.label12.Location = new System.Drawing.Point(21, 317);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 12);
             this.label12.TabIndex = 12;
@@ -195,7 +254,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 207);
+            this.label11.Location = new System.Drawing.Point(20, 290);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 12);
             this.label11.TabIndex = 12;
@@ -203,7 +262,7 @@
             // 
             // numericUpDown6
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(61, 176);
+            this.numericUpDown6.Location = new System.Drawing.Point(61, 258);
             this.numericUpDown6.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -216,7 +275,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 179);
+            this.label10.Location = new System.Drawing.Point(20, 261);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 12);
             this.label10.TabIndex = 12;
@@ -224,7 +283,7 @@
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(61, 149);
+            this.numericUpDown5.Location = new System.Drawing.Point(61, 203);
             this.numericUpDown5.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -237,11 +296,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 152);
+            this.label9.Location = new System.Drawing.Point(9, 205);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 12;
-            this.label9.Text = "存水费";
+            this.label9.Text = "现金存水";
             // 
             // numericUpDown4
             // 
@@ -488,6 +547,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(608, 386);
             this.dataGridView1.TabIndex = 0;
             // 
+            // numericUpDown10
+            // 
+            this.numericUpDown10.Location = new System.Drawing.Point(61, 230);
+            this.numericUpDown10.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericUpDown10.Name = "numericUpDown10";
+            this.numericUpDown10.Size = new System.Drawing.Size(230, 21);
+            this.numericUpDown10.TabIndex = 22;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(9, 232);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 12);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "微信存水";
+            // 
             // DairyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -505,6 +585,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
@@ -515,6 +597,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,5 +641,11 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label6;
         private SelectStaffControl selectStaffControl1;
+        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.Label label17;
     }
 }

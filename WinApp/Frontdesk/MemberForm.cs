@@ -13,9 +13,11 @@ namespace TopFashion
     {
         KellControls.FloatingCircleLoading loading;
         System.Timers.Timer timer1;
-        public MemberForm(User user, int selectIndex = 0)
+        MainForm owner;
+        public MemberForm(User user, MainForm owner, int selectIndex = 0)
         {
             this.User = user;
+            this.owner = owner;
             InitializeComponent();
             this.tabControl1.SelectedIndex = selectIndex;
             this.selectIndex = selectIndex;
@@ -61,12 +63,26 @@ namespace TopFashion
             loading.Refresh();
             timer1.Start();
             base.DisableUserPermission(this);
-            LoadMembers();
-            LoadCardTypes();
+            backgroundWorker1.RunWorkerAsync();
             comboBox2.SelectedIndex = 0;
             comboBox4.SelectedIndex = 0;
             timer1.Stop();
             loading.Hide();
+        }
+
+        private void LoadAll(BackgroundWorker bw)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new System.Action<BackgroundWorker>(LoadAll), bw);
+            }
+            else
+            {
+                LoadMembers();
+                bw.ReportProgress(50);
+                LoadCardTypes();
+                bw.ReportProgress(100);
+            }
         }
 
         private DataTable Search(string name, int sex, CardType cardType, string cardNo, string mobile, bool deadline, out int allCount)
@@ -375,6 +391,33 @@ namespace TopFashion
         private void monthCalendar3_Leave(object sender, EventArgs e)
         {
             monthCalendar3.Hide();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker bw = sender as BackgroundWorker; 
+            LoadAll(bw);
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            owner.RefreshMsg("加载中..." + e.ProgressPercentage + "%");
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show("载入出错！");
+            }
+            else if (e.Cancelled)
+            {
+                MessageBox.Show("终止载入！");
+            }
+            else
+            {
+                //MessageBox.Show("载入完成！");
+            }
         }
     }
 }

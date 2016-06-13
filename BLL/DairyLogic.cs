@@ -35,7 +35,10 @@ namespace TopFashion
                 element.Pos机私教 = Convert.ToDecimal(dt.Rows[0]["Pos机私教"]);
                 element.现金会籍 = Convert.ToDecimal(dt.Rows[0]["现金会籍"]);
                 element.现金私教 = Convert.ToDecimal(dt.Rows[0]["现金私教"]);
-                element.存水费 = Convert.ToDecimal(dt.Rows[0]["存水费"]);
+                element.微信会籍 = Convert.ToDecimal(dt.Rows[0]["微信会籍"]);
+                element.微信私教 = Convert.ToDecimal(dt.Rows[0]["微信私教"]);
+                element.现金存水 = Convert.ToDecimal(dt.Rows[0]["现金存水"]);
+                element.微信存水 = Convert.ToDecimal(dt.Rows[0]["微信存水"]);
                 element.水吧余 = Convert.ToDecimal(dt.Rows[0]["水吧余"]);
                 element.总金额 = Convert.ToDecimal(dt.Rows[0]["总金额"]);
                 element.备注 = dt.Rows[0]["备注"].ToString();
@@ -61,7 +64,10 @@ namespace TopFashion
                     element.Pos机私教 = Convert.ToDecimal(dt.Rows[i]["Pos机私教"]);
                     element.现金会籍 = Convert.ToDecimal(dt.Rows[i]["现金会籍"]);
                     element.现金私教 = Convert.ToDecimal(dt.Rows[i]["现金私教"]);
-                    element.存水费 = Convert.ToDecimal(dt.Rows[i]["存水费"]);
+                    element.微信会籍 = Convert.ToDecimal(dt.Rows[i]["微信会籍"]);
+                    element.微信私教 = Convert.ToDecimal(dt.Rows[i]["微信私教"]);
+                    element.现金存水 = Convert.ToDecimal(dt.Rows[i]["现金存水"]);
+                    element.微信存水 = Convert.ToDecimal(dt.Rows[i]["微信存水"]);
                     element.水吧余 = Convert.ToDecimal(dt.Rows[i]["水吧余"]);
                     element.总金额 = Convert.ToDecimal(dt.Rows[i]["总金额"]);
                     element.备注 = dt.Rows[i]["备注"].ToString();
@@ -88,7 +94,10 @@ namespace TopFashion
                     element.Pos机私教 = Convert.ToDecimal(dt.Rows[i]["Pos机私教"]);
                     element.现金会籍 = Convert.ToDecimal(dt.Rows[i]["现金会籍"]);
                     element.现金私教 = Convert.ToDecimal(dt.Rows[i]["现金私教"]);
-                    element.存水费 = Convert.ToDecimal(dt.Rows[i]["存水费"]);
+                    element.微信会籍 = Convert.ToDecimal(dt.Rows[i]["微信会籍"]);
+                    element.微信私教 = Convert.ToDecimal(dt.Rows[i]["微信私教"]);
+                    element.现金存水 = Convert.ToDecimal(dt.Rows[i]["现金存水"]);
+                    element.微信存水 = Convert.ToDecimal(dt.Rows[i]["微信存水"]);
                     element.水吧余 = Convert.ToDecimal(dt.Rows[i]["水吧余"]);
                     element.总金额 = Convert.ToDecimal(dt.Rows[i]["总金额"]);
                     element.备注 = dt.Rows[i]["备注"].ToString();
@@ -102,7 +111,7 @@ namespace TopFashion
 
         public int AddDairy(Dairy element)
         {
-            string sql = "insert into TF_Dairy (Pos机会籍, Pos机私教, 现金会籍, 现金私教, 存水费, 水吧余, 总金额, 备注, 经手人, 日期) values (" + element.Pos机会籍 + ", " + element.Pos机私教 + ", " + element.现金会籍 + ", " + element.现金私教 + ", " + element.存水费 + ", " + element.水吧余 + ", " + element.总金额 + ", '" + element.备注 + "', " + element.经手人.ID + ", '" + element.日期 + "'); select SCOPE_IDENTITY()";
+            string sql = "insert into TF_Dairy (Pos机会籍, Pos机私教, 现金会籍, 现金私教, 微信会籍, 微信私教, 现金存水, 微信存水, 水吧余, 总金额, 备注, 经手人, 日期) values (" + element.Pos机会籍 + ", " + element.Pos机私教 + ", " + element.现金会籍 + ", " + element.现金私教 + ", " + element.微信会籍 + ", " + element.微信私教 + ", " + element.现金存水 + ", " + element.微信存水 + ", " + element.水吧余 + ", " + element.总金额 + ", '" + element.备注 + "', " + element.经手人.ID + ", '" + element.日期 + "'); select SCOPE_IDENTITY()";
             object obj = sqlHelper.ExecuteSqlReturn(sql);
             int R;
             if (obj != null && obj != DBNull.Value && int.TryParse(obj.ToString(), out R))
@@ -113,7 +122,7 @@ namespace TopFashion
 
         public bool UpdateDairy(Dairy element)
         {
-            string sql = "update TF_Dairy set Pos机会籍=" + element.Pos机会籍 + ", Pos机私教=" + element.Pos机私教 + ", 现金会籍=" + element.现金会籍 + ", 现金私教=" + element.现金私教 + ", 存水费=" + element.存水费 + ", 水吧余=" + element.水吧余 + ", 总金额=" + element.总金额 + ", 备注='" + element.备注 + "', 经手人=" + element.经手人.ID + ",日期='" + element.日期 + "' where ID=" + element.ID;
+            string sql = "update TF_Dairy set Pos机会籍=" + element.Pos机会籍 + ", Pos机私教=" + element.Pos机私教 + ", 现金会籍=" + element.现金会籍 + ", 现金私教=" + element.现金私教 + ", 微信会籍=" + element.微信会籍 + ", 微信私教=" + element.微信私教 + ", 现金存水=" + element.现金存水 + ", 微信存水=" + element.微信存水 + ", 水吧余=" + element.水吧余 + ", 总金额=" + element.总金额 + ", 备注='" + element.备注 + "', 经手人=" + element.经手人.ID + ",日期='" + element.日期 + "' where ID=" + element.ID;
             int r = sqlHelper.ExecuteSql(sql);
             return r > 0;
         }
@@ -134,7 +143,7 @@ namespace TopFashion
             int errCount = 0;
             foreach (Dairy element in list)
             {
-                string sqlStr = "if exists (select 1 from TF_Dairy where ID=" + element.ID + ") update TF_Dairy set Pos机会籍=" + element.Pos机会籍 + ", Pos机私教=" + element.Pos机私教 + ", 现金会籍=" + element.现金会籍 + ", 现金私教=" + element.现金私教 + ", 存水费=" + element.存水费 + ", 水吧余=" + element.水吧余 + ", 总金额=" + element.总金额 + ", 备注='" + element.备注 + "', 经手人=" + element.经手人.ID + ",日期='" + element.日期 + "' where ID=" + element.ID + " else insert into TF_Dairy (Pos机会籍, Pos机私教, 现金会籍, 现金私教, 存水费, 水吧余, 总金额, 备注, 经手人, 日期) values (" + element.Pos机会籍 + ", " + element.Pos机私教 + ", " + element.现金会籍 + ", " + element.现金私教 + ", " + element.存水费 + ", " + element.水吧余 + ", " + element.总金额 + ", '" + element.备注 + "', " + element.经手人.ID + ", '" + element.日期 + "')";
+                string sqlStr = "if exists (select 1 from TF_Dairy where ID=" + element.ID + ") update TF_Dairy set Pos机会籍=" + element.Pos机会籍 + ", Pos机私教=" + element.Pos机私教 + ", 现金会籍=" + element.现金会籍 + ", 现金私教=" + element.现金私教 + ", 微信会籍=" + element.微信会籍 + ", 微信私教=" + element.微信私教 + ", 现金存水=" + element.现金存水 + ", 微信存水=" + element.微信存水 + ", 水吧余=" + element.水吧余 + ", 总金额=" + element.总金额 + ", 备注='" + element.备注 + "', 经手人=" + element.经手人.ID + ",日期='" + element.日期 + "' where ID=" + element.ID + " else insert into TF_Dairy (Pos机会籍, Pos机私教, 现金会籍, 现金私教, 微信会籍, 微信私教, 现金存水, 微信存水, 水吧余, 总金额, 备注, 经手人, 日期) values (" + element.Pos机会籍 + ", " + element.Pos机私教 + ", " + element.现金会籍 + ", " + element.现金私教 + ", " + element.微信会籍 + ", " + element.微信私教 + ", " + element.现金存水 + ", " + element.微信存水 + ", " + element.水吧余 + ", " + element.总金额 + ", '" + element.备注 + "', " + element.经手人.ID + ", '" + element.日期 + "')";
                 try
                 {
                     sqlHelper.ExecuteSql(sqlStr);

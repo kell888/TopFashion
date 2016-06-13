@@ -12,3 +12,8 @@ E:\soft\TopFashionSolution\Model\bin\Debug\Model.dll
 E:\soft\TopFashionSolution\Model\bin\Debug\Model.pdb
 E:\soft\TopFashionSolution\Model\obj\Debug\Model.dll
 E:\soft\TopFashionSolution\Model\obj\Debug\Model.pdb
+F:\2016\TopFashionSolution\Model\bin\Debug\Model.dll
+F:\2016\TopFashionSolution\Model\bin\Debug\Model.pdb
+F:\2016\TopFashionSolution\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\2016\TopFashionSolution\Model\obj\Debug\Model.dll
+F:\2016\TopFashionSolution\Model\obj\Debug\Model.pdb

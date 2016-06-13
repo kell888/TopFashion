@@ -61,6 +61,8 @@
             this.流程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.流程模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.模板列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.所有流程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.清空日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,8 +85,6 @@
             this.退出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.所有流程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -325,16 +325,28 @@
             // 流程模板ToolStripMenuItem
             // 
             this.流程模板ToolStripMenuItem.Name = "流程模板ToolStripMenuItem";
-            this.流程模板ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.流程模板ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.流程模板ToolStripMenuItem.Text = "流程模板";
             this.流程模板ToolStripMenuItem.Click += new System.EventHandler(this.流程模板ToolStripMenuItem_Click);
             // 
             // 模板列表ToolStripMenuItem
             // 
             this.模板列表ToolStripMenuItem.Name = "模板列表ToolStripMenuItem";
-            this.模板列表ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.模板列表ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.模板列表ToolStripMenuItem.Text = "模板列表";
             this.模板列表ToolStripMenuItem.Click += new System.EventHandler(this.模板列表ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(121, 6);
+            // 
+            // 所有流程ToolStripMenuItem
+            // 
+            this.所有流程ToolStripMenuItem.Name = "所有流程ToolStripMenuItem";
+            this.所有流程ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.所有流程ToolStripMenuItem.Text = "所有流程";
+            this.所有流程ToolStripMenuItem.Click += new System.EventHandler(this.所有流程ToolStripMenuItem_Click);
             // 
             // 日志ToolStripMenuItem
             // 
@@ -500,18 +512,6 @@
             this.退出ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
             this.退出ToolStripMenuItem1.Text = "退出";
             this.退出ToolStripMenuItem1.Click += new System.EventHandler(this.退出ToolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(149, 6);
-            // 
-            // 所有流程ToolStripMenuItem
-            // 
-            this.所有流程ToolStripMenuItem.Name = "所有流程ToolStripMenuItem";
-            this.所有流程ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.所有流程ToolStripMenuItem.Text = "所有流程";
-            this.所有流程ToolStripMenuItem.Click += new System.EventHandler(this.所有流程ToolStripMenuItem_Click);
             // 
             // ConfigClient
             // 

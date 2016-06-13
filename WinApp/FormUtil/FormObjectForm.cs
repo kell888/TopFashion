@@ -14,9 +14,12 @@ namespace TopFashion
         int selectIndex;
         KellControls.FloatingCircleLoading loading;
         System.Timers.Timer timer1;
-        public FormObjectForm(User user, int selectIndex = 0)
+        MainForm owner;
+        
+        public FormObjectForm(User user, MainForm owner = null, int selectIndex = 0)
         {
             this.User = user;
+            this.owner = owner;
             InitializeComponent();
             this.tabControl1.SelectedIndex = selectIndex;
             this.selectIndex = selectIndex;
@@ -62,10 +65,24 @@ namespace TopFashion
             loading.Focus();
             loading.Refresh();
             timer1.Start();
-            LoadFormObjects();
-            LoadFormTypes();
+            backgroundWorker1.RunWorkerAsync();
             timer1.Stop();
             loading.Hide();
+        }
+
+        private void LoadAll(BackgroundWorker bw)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new System.Action<BackgroundWorker>(LoadAll), bw);
+            }
+            else
+            {
+                LoadFormObjects();
+                bw.ReportProgress(50);
+                LoadFormTypes();
+                bw.ReportProgress(100);
+            }
         }
 
         private void LoadFormObjects()
@@ -262,6 +279,34 @@ namespace TopFashion
                 form = fef.Form;
                 if (form != null)
                     button6.Text = form.FormInfo;
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker bw = sender as BackgroundWorker;
+            LoadAll(bw);
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            if (owner != null)
+                owner.RefreshMsg("加载中..." + e.ProgressPercentage + "%");
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show("载入出错！");
+            }
+            else if (e.Cancelled)
+            {
+                MessageBox.Show("终止载入！");
+            }
+            else
+            {
+                //MessageBox.Show("载入完成！");
             }
         }
     }

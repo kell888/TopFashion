@@ -18,9 +18,15 @@ namespace TopFashion
 
         public decimal 现金私教 { get; set; }
 
+        public decimal 微信会籍 { get; set; }
+
+        public decimal 微信私教 { get; set; }
+
         public decimal 总金额 { get; set; }
 
-        public decimal 存水费 { get; set; }
+        public decimal 现金存水 { get; set; }
+
+        public decimal 微信存水 { get; set; }
 
         public decimal 水吧余 { get; set; }
 

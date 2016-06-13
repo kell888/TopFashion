@@ -58,6 +58,7 @@
             this.listBoxSelecter1 = new KellListBoxSelecter.ListBoxSelecter();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.depUserControl1 = new TopFashion.DepUserControl();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // comboBox3
@@ -356,6 +357,13 @@
             this.depUserControl1.Size = new System.Drawing.Size(275, 200);
             this.depUserControl1.TabIndex = 50;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(backgroundWorker1_RunWorkerCompleted);
+            // 
             // AssignForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -435,6 +443,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private DepUserControl depUserControl1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
 
     }
 }

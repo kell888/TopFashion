@@ -88,7 +88,10 @@ namespace TopFashion
                     numericUpDown2.Value = dairy.Pos机私教;
                     numericUpDown3.Value = dairy.现金会籍;
                     numericUpDown4.Value = dairy.现金私教;
-                    numericUpDown5.Value = dairy.存水费;
+                    numericUpDown9.Value = dairy.微信会籍;
+                    numericUpDown8.Value = dairy.微信私教;
+                    numericUpDown5.Value = dairy.现金存水;
+                    numericUpDown10.Value = dairy.微信存水;
                     numericUpDown6.Value = dairy.水吧余;
                     numericUpDown7.Value = dairy.总金额;
                     selectStaffControl1.SelectedStaffs = new List<Staff>() { dairy.经手人 };
@@ -105,7 +108,10 @@ namespace TopFashion
             dairy.Pos机私教 = numericUpDown2.Value;
             dairy.现金会籍 = numericUpDown3.Value;
             dairy.现金私教 = numericUpDown4.Value;
-            dairy.存水费 = numericUpDown5.Value;
+            dairy.微信会籍 = numericUpDown9.Value;
+            dairy.微信私教 = numericUpDown8.Value;
+            dairy.现金存水 = numericUpDown5.Value;
+            dairy.微信存水 = numericUpDown10.Value;
             dairy.水吧余 = numericUpDown6.Value;
             dairy.总金额 = numericUpDown7.Value;
             dairy.经手人 = (selectStaffControl1.SelectedStaffs != null && selectStaffControl1.SelectedStaffs.Count > 0) ? selectStaffControl1.SelectedStaffs[0] : null;
@@ -130,7 +136,10 @@ namespace TopFashion
                 dairy.Pos机私教 = numericUpDown2.Value;
                 dairy.现金会籍 = numericUpDown3.Value;
                 dairy.现金私教 = numericUpDown4.Value;
-                dairy.存水费 = numericUpDown5.Value;
+                dairy.微信会籍 = numericUpDown9.Value;
+                dairy.微信私教 = numericUpDown8.Value;
+                dairy.现金存水 = numericUpDown5.Value;
+                dairy.微信存水 = numericUpDown10.Value;
                 dairy.水吧余 = numericUpDown6.Value;
                 dairy.总金额 = numericUpDown7.Value;
                 dairy.经手人 = (selectStaffControl1.SelectedStaffs != null && selectStaffControl1.SelectedStaffs.Count > 0) ? selectStaffControl1.SelectedStaffs[0] : null;
@@ -155,8 +164,8 @@ namespace TopFashion
             {
                 if (MessageBox.Show("确定要删除该业绩？", "删除提醒", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
                 {
-                    Alert alert = (Alert)comboBox1.SelectedItem;
-                    if (AlertLogic.GetInstance().DeleteAlert(alert))
+                    Dairy alert = (Dairy)comboBox1.SelectedItem;
+                    if (DairyLogic.GetInstance().DeleteDairy(alert))
                     {
                         LoadDairys();
                     }
@@ -170,7 +179,7 @@ namespace TopFashion
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            numericUpDown7.Value = numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value;
+            numericUpDown7.Value = numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value + numericUpDown9.Value + numericUpDown8.Value;
         }
     }
 }

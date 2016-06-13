@@ -55,12 +55,19 @@ namespace TopFashion
 
         private void LoadItems(List<DocObject> items)
         {
-            listBox1.Items.Clear();
-            if (items != null)
+            if (this.InvokeRequired)
             {
-                foreach (DocObject doc in items)
+                this.Invoke(new Action<List<DocObject>>(LoadItems), items);
+            }
+            else
+            {
+                listBox1.Items.Clear();
+                if (items != null)
                 {
-                    listBox1.Items.Add(doc);
+                    foreach (DocObject doc in items)
+                    {
+                        listBox1.Items.Add(doc);
+                    }
                 }
             }
         }
@@ -75,28 +82,9 @@ namespace TopFashion
             loading.Refresh();
             timer1.Start();
             base.DisableUserPermission(this);
-            LoadAllDocs();
+            backgroundWorker1.RunWorkerAsync();
             timer1.Stop();
             loading.Hide();
-        }
-
-        private void LoadAllDocs()
-        {
-            List<DocObject> docs = null;
-            if (allDocs)
-            {
-                docs = DocObjectLogic.GetInstance().GetAllDocObjects();
-            }
-            else
-            {
-                docs = new List<DocObject>();
-                List<DocObject> doc = DocObjectLogic.GetInstance().GetDocObjectsByOwner(this.User);
-                docs.AddRange(doc);
-                List<int> tempIds = FlowTemplateLogic.GetInstance().GetTepmIdsByExecOrAppr(this.User.ID.ToString());
-                List<DocObject> doc2 = DocObjectLogic.GetInstance().GetDocObjectsByTemplateId(tempIds);
-                docs.AddRange(doc2);
-            }
-            LoadDocObjects(docs);
         }
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -135,7 +123,7 @@ namespace TopFashion
             {
                 DocEditForm def = new DocEditForm(this.User, this.owner, doc.Form, doc);
                 def.ShowDialog();
-                LoadAllDocs();
+                LoadAllDocs(null);
             }
             else
             {
@@ -192,13 +180,71 @@ namespace TopFashion
             NewDocForm ndf = new NewDocForm(this.User, this.owner);
             if (ndf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                LoadAllDocs();
+                LoadAllDocs(null);
             }
         }
 
         private void 添加新文档ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewDoc();
+        }
+
+        private void LoadAllDocs(BackgroundWorker bw)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new System.Action<BackgroundWorker>(LoadAllDocs), bw);
+            }
+            else
+            {
+                List<DocObject> docs = null;
+                if (allDocs)
+                {
+                    docs = DocObjectLogic.GetInstance().GetAllDocObjects();
+                    if (bw != null) bw.ReportProgress(50);
+                }
+                else
+                {
+                    docs = new List<DocObject>();
+                    List<DocObject> doc = DocObjectLogic.GetInstance().GetDocObjectsByOwner(this.User);
+                    docs.AddRange(doc);
+                    if (bw != null) bw.ReportProgress(30);
+                    List<int> tempIds = FlowTemplateLogic.GetInstance().GetTepmIdsByExecOrAppr(this.User.ID.ToString());
+                    if (bw != null) bw.ReportProgress(50);
+                    List<DocObject> doc2 = DocObjectLogic.GetInstance().GetDocObjectsByTemplateId(tempIds);
+                    docs.AddRange(doc2);
+                    if (bw != null) bw.ReportProgress(70);
+                }
+                LoadDocObjects(docs);
+                if (bw != null) bw.ReportProgress(100);
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker bw = sender as BackgroundWorker;
+            LoadAllDocs(bw);
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            owner.RefreshMsg("载入中..." + e.ProgressPercentage + "%");
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show("载入出错！");
+            }
+            else if (e.Cancelled)
+            {
+                MessageBox.Show("终止载入！");
+            }
+            else
+            {
+                //MessageBox.Show("载入完成！");
+            }
         }
     }
 }

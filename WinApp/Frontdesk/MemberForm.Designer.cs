@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -72,9 +75,7 @@
             this.打印Button = new System.Windows.Forms.Button();
             this.搜索Button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -131,6 +132,33 @@
             this.tabPage1.Text = "编辑会员";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPage1_MouseClick);
+            // 
+            // monthCalendar3
+            // 
+            this.monthCalendar3.Location = new System.Drawing.Point(51, 146);
+            this.monthCalendar3.Name = "monthCalendar3";
+            this.monthCalendar3.TabIndex = 17;
+            this.monthCalendar3.Visible = false;
+            this.monthCalendar3.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar3_DateSelected);
+            this.monthCalendar3.Leave += new System.EventHandler(this.monthCalendar3_Leave);
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(51, 146);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(236, 21);
+            this.textBox11.TabIndex = 16;
+            this.textBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox11_MouseClick);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 149);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 12);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "开卡日";
             // 
             // label15
             // 
@@ -387,11 +415,12 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.winFormPager1.BackColor = System.Drawing.Color.Transparent;
             this.winFormPager1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("winFormPager1.BackgroundImage")));
+            this.winFormPager1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.winFormPager1.Location = new System.Drawing.Point(3, 34);
             this.winFormPager1.Name = "winFormPager1";
             this.winFormPager1.PageSize = 25;
             this.winFormPager1.RecordCount = 0;
-            this.winFormPager1.Size = new System.Drawing.Size(692, 22);
+            this.winFormPager1.Size = new System.Drawing.Size(692, 23);
             this.winFormPager1.TabIndex = 26;
             this.winFormPager1.PageIndexChanged += new System.EventHandler(this.winFormPager1_PageIndexChanged);
             // 
@@ -532,32 +561,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(692, 360);
             this.dataGridView1.TabIndex = 0;
             // 
-            // textBox11
+            // backgroundWorker1
             // 
-            this.textBox11.Location = new System.Drawing.Point(51, 146);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(236, 21);
-            this.textBox11.TabIndex = 16;
-            this.textBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox11_MouseClick);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 149);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 12);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "开卡日";
-            // 
-            // monthCalendar3
-            // 
-            this.monthCalendar3.Location = new System.Drawing.Point(51, 146);
-            this.monthCalendar3.Name = "monthCalendar3";
-            this.monthCalendar3.TabIndex = 17;
-            this.monthCalendar3.Visible = false;
-            this.monthCalendar3.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar3_DateSelected);
-            this.monthCalendar3.Leave += new System.EventHandler(this.monthCalendar3_Leave);
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // MemberForm
             // 
@@ -631,5 +640,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar3;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label16;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

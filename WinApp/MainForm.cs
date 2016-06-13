@@ -450,13 +450,13 @@ namespace TopFashion
 
         private void 查询会员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MemberForm mf = new MemberForm(this.User, 1);
+            MemberForm mf = new MemberForm(this.User, this, 1);
             AddTabPage("会员信息", mf);
         }
 
         private void 编辑会员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MemberForm mf = new MemberForm(this.User);
+            MemberForm mf = new MemberForm(this.User, this);
             AddTabPage("会员信息", mf);
         }
 
@@ -564,7 +564,7 @@ namespace TopFashion
 
         private void 表单管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormObjectForm fof = new FormObjectForm(this.User);
+            FormObjectForm fof = new FormObjectForm(this.User, this);
             AddTabPage("表单管理", fof);
         }
 

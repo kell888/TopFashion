@@ -65,12 +65,7 @@ namespace TopFashion
         private void RefreshAll()
         {
             owner.SetStatusText("正在刷新架构信息，请稍候...");
-            RefreshUsers();
-            RefreshUgrps();
-            RefreshDeps();
-            RefreshPrms();
-            RefreshRoles();
-            RefreshDepStaff();
+            backgroundWorker1.RunWorkerAsync();
             label5.Text = "查看权限=>";
             listBox1.Items.Clear();
             owner.SetStatusText("Ready...");
@@ -479,6 +474,56 @@ namespace TopFashion
                         MessageBox.Show(ex.Message);
                     }
                 }
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker bw = sender as BackgroundWorker;
+            RefreshUI(bw);
+        }
+
+        private void RefreshUI(BackgroundWorker bw)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new System.Action<BackgroundWorker>(RefreshUI), bw);
+            }
+            else
+            {
+                RefreshUsers();
+                bw.ReportProgress(15);
+                RefreshUgrps();
+                bw.ReportProgress(30);
+                RefreshDeps();
+                bw.ReportProgress(45);
+                RefreshPrms();
+                bw.ReportProgress(60);
+                RefreshRoles();
+                bw.ReportProgress(80);
+                RefreshDepStaff();
+                bw.ReportProgress(100);
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            owner.SetStatusText("加载中..." + e.ProgressPercentage + "%");
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show("载入出错！");
+            }
+            else if (e.Cancelled)
+            {
+                MessageBox.Show("终止载入！");
+            }
+            else
+            {
+                //MessageBox.Show("载入完成！");
             }
         }
     }

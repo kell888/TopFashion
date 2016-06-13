@@ -31,7 +31,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>22</ApplicationRevision>
+    <ApplicationRevision>25</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -87,9 +87,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\KellWorkFlow\KellWorkFlow\bin\Debug\KellWorkFlow.dll</HintPath>
     </Reference>
-    <Reference Include="LoadingCircle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\KellControls2012-1-12备份\KellControls\LoadingCircle\bin\Release\LoadingCircle.dll</HintPath>
+    <Reference Include="LoadingCircle">
+      <HintPath>..\..\KellControls2016-3-16备份\KellControls\LoadingCircle\bin\Release\LoadingCircle.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

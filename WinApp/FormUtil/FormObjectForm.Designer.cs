@@ -45,6 +45,7 @@
             this.打印Button = new System.Windows.Forms.Button();
             this.搜索Button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -226,6 +227,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(608, 383);
             this.dataGridView1.TabIndex = 0;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
             // FormObjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -268,5 +276,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button6;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

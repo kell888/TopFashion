@@ -21,3 +21,12 @@ E:\soft\TopFashionSolution\Common\bin\Debug\Log.pdb
 E:\soft\TopFashionSolution\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\soft\TopFashionSolution\Common\obj\Debug\Common.dll
 E:\soft\TopFashionSolution\Common\obj\Debug\Common.pdb
+F:\2016\TopFashionSolution\Common\bin\Debug\Common.dll
+F:\2016\TopFashionSolution\Common\bin\Debug\Common.pdb
+F:\2016\TopFashionSolution\Common\bin\Debug\Config.dll
+F:\2016\TopFashionSolution\Common\bin\Debug\Log.dll
+F:\2016\TopFashionSolution\Common\bin\Debug\Config.pdb
+F:\2016\TopFashionSolution\Common\bin\Debug\Log.pdb
+F:\2016\TopFashionSolution\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\2016\TopFashionSolution\Common\obj\Debug\Common.dll
+F:\2016\TopFashionSolution\Common\obj\Debug\Common.pdb

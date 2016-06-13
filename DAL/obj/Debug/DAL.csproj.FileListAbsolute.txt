@@ -32,3 +32,17 @@ E:\soft\TopFashionSolution\DAL\bin\Debug\Log.pdb
 E:\soft\TopFashionSolution\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\soft\TopFashionSolution\DAL\obj\Debug\DAL.dll
 E:\soft\TopFashionSolution\DAL\obj\Debug\DAL.pdb
+F:\2016\TopFashionSolution\DAL\bin\Debug\DAL.dll
+F:\2016\TopFashionSolution\DAL\bin\Debug\DAL.pdb
+F:\2016\TopFashionSolution\DAL\bin\Debug\Common.dll
+F:\2016\TopFashionSolution\DAL\bin\Debug\Config.dll
+F:\2016\TopFashionSolution\DAL\bin\Debug\Interop.SQLDMO.dll
+F:\2016\TopFashionSolution\DAL\bin\Debug\Log.dll
+F:\2016\TopFashionSolution\DAL\bin\Debug\NPOI.dll
+F:\2016\TopFashionSolution\DAL\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\2016\TopFashionSolution\DAL\bin\Debug\Common.pdb
+F:\2016\TopFashionSolution\DAL\bin\Debug\Config.pdb
+F:\2016\TopFashionSolution\DAL\bin\Debug\Log.pdb
+F:\2016\TopFashionSolution\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\2016\TopFashionSolution\DAL\obj\Debug\DAL.dll
+F:\2016\TopFashionSolution\DAL\obj\Debug\DAL.pdb
