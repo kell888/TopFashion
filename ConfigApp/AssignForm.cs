@@ -502,13 +502,13 @@ namespace TopFashion
                 RefreshRoles();
                 bw.ReportProgress(80);
                 RefreshDepStaff();
-                bw.ReportProgress(100);
+                if (owner != null) owner.SetStatusText("载入完毕");
             }
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            owner.SetStatusText("加载中..." + e.ProgressPercentage + "%");
+            if (owner != null) owner.SetStatusText("加载中..." + e.ProgressPercentage + "%");
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)

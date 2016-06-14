@@ -2,3 +2,4 @@ E:\soft\TopFashionSolution\Log\bin\Release\Log.dll
 E:\soft\TopFashionSolution\Log\obj\Release\Log.dll
 F:\2016\TopFashionSolution\Log\bin\Release\Log.dll
 F:\2016\TopFashionSolution\Log\obj\Release\Log.dll
+E:\soft\TopFashionSolution\Log\obj\Release\Log.csprojResolveAssemblyReference.cache

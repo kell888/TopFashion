@@ -20,6 +20,13 @@ namespace TopFashion
 
         internal void SureExit()
         {
+            if (Configs.MonitorNetwork)
+            {
+                if (netMonitor.Adapters.Count() > 0)
+                    netMonitor.StopMonitoring();
+                if (timer2.Enabled)
+                    timer2.Stop();
+            }
             notifyIcon1.Dispose();
             Environment.Exit(0);
         }
@@ -51,13 +58,16 @@ namespace TopFashion
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            netMonitor = new NetworkMonitor();
-            if (netMonitor.Adapters.Count() > 0)
-                netMonitor.StartMonitoring();
-            timer2 = new System.Timers.Timer(1000);
-            timer2.AutoReset = true;
-            timer2.Elapsed += new System.Timers.ElapsedEventHandler(timer2_Elapsed);
-            timer2.Start();
+            if (Configs.MonitorNetwork)
+            {
+                netMonitor = new NetworkMonitor();
+                if (netMonitor.Adapters.Count() > 0)
+                    netMonitor.StartMonitoring();
+                timer2 = new System.Timers.Timer(1000);
+                timer2.AutoReset = true;
+                timer2.Elapsed += new System.Timers.ElapsedEventHandler(timer2_Elapsed);
+                timer2.Start();
+            }
             RefreshMsg("正在初始化系统...");
             ThreadPool.QueueUserWorkItem(delegate
             {
@@ -90,10 +100,13 @@ namespace TopFashion
                 {
                     WriteLog.CreateLog(this.User.Username, "MainForm.FormClosing", "log", "用户：" + this.User.Username);
                     LockSystem();
-                    if (netMonitor.Adapters.Count() > 0)
-                        netMonitor.StopMonitoring();
-                    if (timer2.Enabled)
-                        timer2.Stop();
+                    if (Configs.MonitorNetwork)
+                    {
+                        if (netMonitor.Adapters.Count() > 0)
+                            netMonitor.StopMonitoring();
+                        if (timer2.Enabled)
+                            timer2.Stop();
+                    }
                     notifyIcon1.Dispose();
                     Environment.Exit(0);
                 }

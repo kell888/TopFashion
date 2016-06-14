@@ -81,7 +81,7 @@ namespace TopFashion
                 LoadFormObjects();
                 bw.ReportProgress(50);
                 LoadFormTypes();
-                bw.ReportProgress(100);
+                if (owner != null) owner.RefreshMsg("载入完毕");
             }
         }
 
@@ -290,8 +290,7 @@ namespace TopFashion
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            if (owner != null)
-                owner.RefreshMsg("加载中..." + e.ProgressPercentage + "%");
+            if (owner != null) owner.RefreshMsg("加载中..." + e.ProgressPercentage + "%");
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

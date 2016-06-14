@@ -201,22 +201,22 @@ namespace TopFashion
                 if (allDocs)
                 {
                     docs = DocObjectLogic.GetInstance().GetAllDocObjects();
-                    if (bw != null) bw.ReportProgress(50);
+                    bw.ReportProgress(50);
                 }
                 else
                 {
                     docs = new List<DocObject>();
                     List<DocObject> doc = DocObjectLogic.GetInstance().GetDocObjectsByOwner(this.User);
                     docs.AddRange(doc);
-                    if (bw != null) bw.ReportProgress(30);
+                    bw.ReportProgress(30);
                     List<int> tempIds = FlowTemplateLogic.GetInstance().GetTepmIdsByExecOrAppr(this.User.ID.ToString());
-                    if (bw != null) bw.ReportProgress(50);
+                    bw.ReportProgress(50);
                     List<DocObject> doc2 = DocObjectLogic.GetInstance().GetDocObjectsByTemplateId(tempIds);
                     docs.AddRange(doc2);
-                    if (bw != null) bw.ReportProgress(70);
+                    bw.ReportProgress(70);
                 }
                 LoadDocObjects(docs);
-                if (bw != null) bw.ReportProgress(100);
+                if (owner != null) owner.RefreshMsg("载入完毕");
             }
         }
 
@@ -228,7 +228,7 @@ namespace TopFashion
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            owner.RefreshMsg("载入中..." + e.ProgressPercentage + "%");
+            if (owner != null) owner.RefreshMsg("载入中..." + e.ProgressPercentage + "%");
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

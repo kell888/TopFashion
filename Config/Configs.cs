@@ -236,5 +236,17 @@ namespace TopFashion
                 return val;
             }
         }
+
+        public static bool MonitorNetwork
+        {
+            get
+            {
+                bool val = false;
+                string raw = ConfigurationManager.AppSettings["monitorNetwork"];
+                if (!string.IsNullOrEmpty(raw) && raw == "1")
+                    val = true;
+                return val;
+            }
+        }
     }
 }
